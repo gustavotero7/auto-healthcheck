@@ -1,0 +1,20 @@
+ping_interval: 5
+targets:
+    - host: https://google.com
+      expected_status_code: 200
+    - host: https://facebook.com
+      expected_status_code: 200
+    - host: https://twitter.comm
+      expected_status_code: 200
+email_notification:
+  from: 
+    smtp_host: smtp.gmail.com 
+    smtp_port: 587 
+    user: fulano@example.com
+    password: p4s5w0rd
+    name: ping bot
+  to:
+    - fulana@example.com
+    - fulanito@example.com
+
+

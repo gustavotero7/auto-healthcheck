@@ -1,20 +1,28 @@
-ping_interval: 5
+# Ping interval in seconds
+ping_interval: 120
+# Notification interval in minutes
+notification_interval: 240
+# Max notifications to send on error status every {notification_interval}
+max_notifications: 5
 targets:
+  # Set many hosts as you need
     - host: https://google.com
       expected_status_code: 200
     - host: https://facebook.com
       expected_status_code: 200
-    - host: https://twitter.comm
+    - host: https://twitter.com
       expected_status_code: 200
 email_notification:
+  # This example uses gmail smtp but you can use any smtp server/account
   from: 
+    name: ping bot
+    user: fulano@example.com
     smtp_host: smtp.gmail.com 
     smtp_port: 587 
-    user: fulano@example.com
-    password: p4s5w0rd
-    name: ping bot
+    password: y0urP4s5w0rd
   to:
+    # Set one or more emails to be notified when staus change
+    - fulano@example.com
     - fulana@example.com
-    - fulanito@example.com
 
 
